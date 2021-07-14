@@ -1,0 +1,22 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+.container{height: 776px;}
+#h2{margin-top:78px; margin-bottom: 52px; font-size: 50px; font-weight: bold;color: #00395e;}
+.btn_login{ cursor: pointer; width: 359px;height: 65px; border-radius: 5px;
+            background-color: #00395e; border-style: none; color: white; font-size:22px;}
+.btn_login:hover{background-color: #2682be;}
+#email,#password{padding-top: 3px; width: 362px; height: 41px;border-radius: 5px; border:solid 1px #00395e;}
+label{padding-bottom: 3px !important; padding-right: 34%; color: #00395e;}
+label.login.lg{padding-right:39%; }
+.link{padding-left: 33%;padding-top: 20px; padding-bottom: 20px; }
+.link a{float: left !important; padding-right: 3%; color: #00395e;}
+hr{ position: absolute;left: 213px;border: solid #00395e 1px !important; width: 359px;}
+.snslogin p{padding:68px 0 32px;font-weight: bold; color:  #00395e;}
+.sns{position: absolute;left: 251px; text-align: center;}
+.sns li{float: left; }
+.sns li img{padding-left: 23px; width: 65px;}
+
+#footer p{color: #fff;}
+
+

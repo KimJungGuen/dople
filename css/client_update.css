@@ -1,0 +1,2504 @@
+@import url(common_1.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+
+/* Accessibility */
+
+
+.wizard > .steps .current-info,
+.tabcontrol > .steps .current-info
+{
+    position: absolute;
+    left: -999em;
+}
+
+.wizard > .content > .title,
+.tabcontrol > .content > .title
+{
+    position: absolute;
+    left: -999em;
+}
+
+
+/*
+    Wizard
+*/
+.content > h1
+{   
+    position: relative;
+    top:88px;
+    color: black;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+}
+
+
+
+.wizard > .steps
+{
+    position: relative;
+    margin: auto;
+    top: 136px;
+    display: block;
+    width: 70%;
+}
+
+
+.wizard.vertical > .steps
+{
+    display: inline;
+    float: left;
+    margin-top: 215px;
+    width: 70%;
+    text-align: center;
+}
+
+.wizard > .steps .number
+{
+    font-size: 0.7vw;
+}
+
+.wizard > .steps > ul > li
+{
+    width: 20%;
+}
+
+.wizard > .steps > ul > li,
+.wizard > .actions > ul > li
+{
+    float: left;
+}
+
+.wizard.vertical > .steps > ul > li
+{
+    float: none;
+    margin-left: 58%;
+    margin-bottom: 35px;
+    width: 70%;
+    text-align: center;
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active
+{
+    display: block;
+    width: auto;
+    margin: 0 0.5em 0.5em;
+    padding: 1em 1em;
+    text-decoration: none;
+    font-size: 0.75vw;
+    text-align: center;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active
+{
+    margin-bottom: 20px;
+    background: #efefef;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+    color: #000;
+    cursor: default;
+    font-size: 0.75vw;
+    text-align: center;
+}
+
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active
+{
+    background: #000000;
+    color: #fff;
+    cursor: default;
+    font-size: 0.75vw;
+    text-align: center;
+}
+
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active
+{
+    background: #daa520;
+    color: #000;
+}
+
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active
+{
+    background: #ff3111;
+    color: #fff;
+}
+
+.wizard > .content
+{   
+    position: relative;
+    margin: auto;
+    margin-bottom: 100px;
+    top: 211px;
+    /* background: #eee; */
+    display: block;
+    width: 80%;
+    overflow: hidden;
+    color: #000000;
+}
+
+.wizard.vertical > .content
+{
+    display: inline;
+    width: 80%;
+}
+
+.wizard > .content > .body
+{
+    position: relative;
+    margin-bottom: 50px;
+    margin: auto;
+    width: 70%;
+    height: 95%;
+}
+
+.wizard > .content > .body ul
+{
+    list-style: disc !important;
+}
+
+.wizard > .content > .body ul > li
+{
+    display: list-item;
+}
+
+.wizard > .content > .body > iframe
+{
+    border: 0 none;
+    width: 100%;
+    height: 100%;
+}
+
+.wizard > .content > .body input
+{
+    display: block;
+    border: 1px solid #ccc;
+}
+
+.wizard > .content > .body input[type="checkbox"]
+{
+    display: inline-block;
+}
+
+.wizard > .content > .body input.error
+{
+    background: rgb(251, 227, 228);
+    border: 1px solid #fbc2c4;
+    color: #8a1f11;
+}
+
+.wizard > .content > .body label
+{
+    display: inline-block;
+}
+
+.wizard > .content > .body label.error
+{
+    color: #8a1f11;
+    display: inline-block;
+    margin-left: 1.5em;
+}
+
+ .wizard > .actions 
+{
+    position: relative;
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 70%;
+}
+
+.wizard > .actions::after{content: ""; display:block; clear: both;}
+
+.wizard.vertical > .actions
+{
+    display: inline-block;
+    width: 95%;
+}
+
+.wizard > .actions > ul
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.wizard > .actions > ul > li
+{
+    margin: 0 0.5em;
+}
+
+.wizard > .actions > ul > li:first-child
+{
+    float: left;
+}
+
+
+.wizard.vertical > .actions > ul > li
+{
+    margin: 0 0 0 1em;
+}
+
+.wizard > .actions a,
+.wizard > .actions a:hover,
+.wizard > .actions a:active
+{
+    background: #000;
+    color: #fff;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active
+{
+    background: #efefef;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+    color: rgb(182, 182, 182);
+}
+
+/*
+    file img
+*/
+.img-wrapper
+{
+    position: relative;
+}
+
+#front-area
+{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: 165px;
+    top: 60px;
+    border: 2px solid black;
+}
+
+#back_area
+{
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    left: 162px;
+    top: 60px;
+    border: 2px solid black;
+}
+
+#left_area
+{
+    position: absolute;
+    width: 75px;
+    height: 260px;
+    left: 110px;
+    top: 25px;
+    border: 2px solid black;
+}
+
+#right_area
+{
+    position: absolute;
+    width: 75px;
+    height: 260px;
+    left: 100px;
+    top: 1300px;
+    border: 2px solid black;
+}
+
+/*
+    Tabcontrol
+*/
+
+.tabcontrol > .steps
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.tabcontrol > .steps > ul
+{
+    position: relative;
+    margin: 6px 0 0 0;
+    top: 1px;
+    z-index: 1;
+}
+
+.tabcontrol > .steps > ul > li
+{
+    float: left;
+    margin: 5px 2px 0 0;
+    padding: 1px;
+
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tabcontrol > .steps > ul > li:hover
+{
+    background: #edecec;
+    border: 1px solid #bbb;
+    padding: 0;
+}
+
+.tabcontrol > .steps > ul > li.current
+{
+    background: #fff;
+    border: 1px solid #bbb;
+    border-bottom: 0 none;
+    padding: 0 0 1px 0;
+    margin-top: 0;
+}
+
+.tabcontrol > .steps > ul > li > a
+{
+    color: #5f5f5fef;
+    display: inline-block;
+    border: 0 none;
+    margin: 0;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li > a:hover
+{
+    text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li.current > a
+{
+    padding: 15px 30px 10px 30px;
+}
+
+.tabcontrol > .content
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 35em;
+    overflow: hidden;
+    border-top: 1px solid #bbb;
+    padding-top: 20px;
+}
+
+.tabcontrol > .content > .body
+{
+    float: left;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    padding: 2.5%;
+    
+}
+
+.tabcontrol > .content > .body ul
+{
+    list-style: disc !important;
+}
+
+.tabcontrol > .content > .body ul > li
+{
+    display: list-item;
+}
+
+p.sub-title-error1
+{
+    margin-left: 10%;
+    color: red;
+    font-weight: bold;
+} 
+
+/* -----------------------------MSYCSS-------------------------- */
+
+/* 의뢰자종류*/
+.kind
+{
+    display: flex;
+    justify-content: center;
+}
+
+.box
+{
+    margin: 2%;
+    margin-bottom: 100px;
+    cursor: pointer;
+    background-color: #efefef;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+    outline: none;
+    border-radius: 6px;
+    width: 28%;
+    height: 223px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+
+@keyframes danger{
+    0% { background-color:  #efefef; box-shadow: 0 0 3px #efefef; }
+    50% { background-color: #e69900; box-shadow: 0 0 10px #e69900; }
+    100% { background-color:#daa520; box-shadow: 0 0 3px #daa520; }
+}
+
+.box:hover
+{
+    background-color:  #daa52071;
+    animation: danger 1500ms infinite;
+}
+
+
+.box img
+{
+    padding-top: 55px;
+}
+
+.box p
+{
+ margin-top: 31px;
+}
+
+.sub-title-error span
+{
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* 세금계산서 */
+.client-k .row
+{
+    text-align: center;
+}
+
+.col-xs-12 p
+{
+    display:inline-block;
+    font-size: 1.1vw; 
+    color: black;
+}
+.col-lg-offset-2
+{
+    margin-left: 30.5%;
+    margin-bottom: 163px;
+}
+.input_filed
+{
+    padding-left: 3%; 
+    margin-bottom: 30px; 
+    width: 45%; 
+    height: 41px;
+    border-radius: 5px; 
+    border:solid 1px #00395e; 
+    color: black;
+}
+
+.col-md-12 .input_f2
+{
+    margin-left: 11%;
+}
+
+
+label.login
+{
+
+    display: flex !important;
+    margin-left: 24%;
+    padding-bottom: 4px !important; 
+    color: #00395e;
+}
+.bt_j
+{
+    width: 11%; 
+    height: 40px;
+    border-radius: 5px; 
+    border-style: none; 
+    background-color: #00395e;
+}
+
+.form-sty
+{
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+
+
+/*의뢰방식 */
+
+.means
+{   
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+
+/*중간정산박스*/
+.interim
+{   
+    position: fixed;
+    right: 0;
+    top: 361px;
+    padding: 1% 1%;
+    width: 10%;
+    border-radius: 6px;
+    background-color: #daa520;
+}
+
+.interim tbody
+{   
+    color: #000;
+}
+
+.interim table
+{   
+    width: 100%;
+    margin: auto;
+}
+
+
+.interim tr:last-child
+{
+    border-top: 1px solid #000000;
+}
+
+.interim tr:first-child
+{   
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}
+
+.interim td
+{
+    padding-bottom: 10px;
+    border-top:none; 
+    border-bottom: none;
+    border-right: none;
+}
+
+
+
+
+
+
+/* 툴팁 */
+  
+ [data-tooltip-text]:hover
+ {
+    position: relative;
+  }
+
+  [data-tooltip-text]:hover:after {
+	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+	border-radius: 6px;
+
+	color: #000;
+	font-size: 1vw;
+	content: attr(data-tooltip-text);
+
+    margin-bottom: 10px;
+	top: 0;
+	left: 0;    
+	padding: 7px 12px;
+	position: absolute;
+	width: auto;
+	min-width: 299px;
+	word-wrap: break-word;
+
+	z-index: 2;
+}
+
+
+
+/* 의류카테고리 */
+
+.category
+{
+    display: flex;
+    justify-content: center;
+}
+
+.category .box
+{
+    height: 280px;
+}
+
+
+
+/* 의류종류 */
+.type
+{
+    display: flex;
+    justify-content: center;
+    flex-flow: wrap; 
+}
+
+.type .box
+{
+    width: 24%;
+}
+
+
+
+
+/* 의뢰종류-상세 */
+.type_detail
+{
+    display: flex;
+    justify-content: center;
+}
+
+.type_detail_p
+{
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.type_detail_p1
+{
+    margin-left: 2%;
+    margin-bottom: 10px;
+}
+
+.sub-title-error2 span
+{
+    color: red;
+    font-weight: bold;
+}
+
+/* 의류핏 */
+.fit
+{
+    display: flex;
+    flex-flow: wrap; 
+    justify-content: center;
+}
+
+.fit .box
+{
+    margin-bottom: 0;
+    width: 24%;
+}
+
+
+.fit .box img
+{
+    padding-top: 39px;
+}
+
+.fit .gucci img
+{
+    padding-top: 51px;
+}
+
+
+.fit .box p
+{
+    margin-top: 17px;
+}
+
+.typo
+{
+    margin-bottom: 100px;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1vw;
+    color: black;
+}
+
+.typo a
+{
+    text-decoration: none;
+    color: #008891;
+}
+
+.typo a:hover
+{
+    color: black;
+}
+
+
+.typo p
+{
+    margin-bottom: 10px;
+}
+
+/* 의류개수 및 원단 */
+.row
+{
+    margin: auto;
+}
+
+.row .sub-title
+{
+    display: inline-block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: black;
+    
+}
+
+.row .sub-title:nth-child(1)
+{
+    margin-bottom: 0;
+}
+
+.wizard > .content > .body input 
+{
+    display: inline-block;
+    text-align: center;
+    background-color: #cacaca28;
+    border: none;
+    
+}
+
+.row .sub-title-add
+{   
+    cursor: pointer;
+    margin-top: 15px;
+    width: 8%;
+    float: right;
+}
+
+.row .sub-title-add img
+{
+    margin-top: 5px;
+    margin-left: 5%;
+}
+
+.fabric td img
+{
+    width: 13%;
+}
+
+table.afternoon-session 
+{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    table-layout: fixed;
+} 
+
+table.afternoon-session.sizeadd input
+{
+    width: 53%;
+}
+
+table.sizeadd
+{
+    margin : 50px 0;
+}
+
+
+table.grading_w2 span:first-child
+{
+    color: red;
+}
+
+table.afternoon-session thead tr
+{
+    width: 100%;
+}
+
+
+table td,th 
+{
+    text-align: center; 
+    vertical-align: middle;
+    color: black;
+}
+
+
+
+table.afternoon-session thead tr
+{	
+    color: #fff;
+    text-align: center;
+}
+.afternoon-session .grading_all th, td 
+{
+    padding: 2.5%;
+    vertical-align: top;
+    border-top:1px solid #ccc; 
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.afternoon-session th:last-child,td:last-child
+{
+    border-right:none;
+}
+
+
+.grading_all td img
+{
+    width: 30%;
+}
+
+td label .list
+{
+    width: 10%;
+}
+
+thead
+{
+    border-top:1px solid #ccc;
+}
+
+.col-lg-offset-2 
+{
+    margin-left: 0;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.grading
+{
+    display: inline-block !important;
+}
+
+.cd
+{
+    border: solid 2px #000;
+}
+
+.grading_all .check-size label
+{
+   width: 13%;
+}
+
+.grading_all .check-size label input
+{
+    margin-right: 15%;
+}
+
+
+/* 그레이딩 */
+
+.row .grading-ct
+{
+    font-size: 0.8vw;
+    color: red;
+}
+
+.grad input
+{
+    width: 53%;
+}
+
+.grad .clothes-size
+{
+    margin-top: 35px;
+    position: relative;
+    left: 35%;
+}
+
+
+.grading_w span, .grading_w2 span
+{
+    display:none;
+}
+
+.grading_w2 .col label
+{
+    width: 48%;
+}
+
+.grading_w2 .col label:nth-child(3)
+{
+    margin-left: 3.2%;
+}
+
+.grading_w2 .col label:last-child
+{
+    width: 2;
+}
+
+.grading_w2 .col label .cd
+{
+    width: 20%;
+}
+.grading_w2 .col label .cd:nth-child(3)
+{
+    width: 23%;
+}
+
+.g-bt
+{
+    text-align: right;
+}
+
+.g-bt .gbt2
+{
+    display: inline;
+}
+
+.g-bt button
+{
+    padding: 2px;
+    margin-right: 2%;
+    margin-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 7%;
+}
+
+
+.grad .arrow-all img.arrow:nth-child(2),
+.grad .arrow-all img.arrow:nth-child(3),
+.grad .arrow-all img.arrow:nth-child(4),
+.grad .arrow-all img.arrow:nth-child(5),
+.grad .arrow-all img.arrow:nth-child(6),
+.grad .arrow-all img.arrow:nth-child(7),
+.grad .arrow-all img.arrow:nth-child(8),
+.grad .arrow-all img.arrow:nth-child(9),
+.grad .arrow-all img.arrow:nth-child(10),
+.grad .arrow-all img.arrow:nth-child(11)
+{
+    z-index: 3;
+    position: absolute;
+    left: 35.5%;
+    margin-top: 35px;
+}
+
+.check_mis{
+    border: 2px solid red !important;
+}
+
+.select_mis{
+    border: 2px solid red !important;
+}
+
+/* 부자재 */
+.sub label
+{
+    font-weight: normal;
+    width: 24%;
+}
+
+.sub .file_load label
+{
+    width: 100%;
+}
+
+.sub .row p span
+{
+    font-size: 0.5vw;
+}
+
+.sub .label_s
+{
+    margin-top: 20px;
+}
+
+.sub label span
+{
+    font-size: 0.5vw;
+    color: red;
+}
+
+.subsidiary
+{
+    margin-top: 100px;
+}
+
+table.choice,table.grading_all
+{
+    margin-top: 20px;
+}
+
+table.check-b
+{
+    font-weight: normal;
+}
+
+input.check-b
+{
+    width: 10%;
+}
+input.check-b.check-main
+{
+    width: 10%;
+}
+
+.sub table.label_s label:last-child
+{
+    margin-left: -4%;
+} 
+
+p.sub-title-2
+{
+    cursor: pointer;
+    float: right;
+    margin-top:14px;
+
+}
+
+p.sub-title-2 img
+{
+    margin-top:7px;
+}
+
+
+/* 가공방식 */
+.processing_m
+{
+    margin: auto;
+    margin-bottom: 100px;
+    width: 83%;
+}
+
+.s-title
+{
+    margin-bottom: 20px;
+}
+
+.way
+{
+    margin-bottom: 70px;
+}
+
+.way p
+{
+    margin-bottom: 0 !important;
+}
+.process-img
+{
+    position: relative;
+}
+
+.image-wrapper {
+	position: absolute;
+	transform: translate(-50%, -50%);
+}
+
+.process-img img
+{
+    margin-left: 10%;
+    margin-bottom: 50px;
+}
+
+.process_g .bt_remove
+{
+    color: black;
+}
+
+.process_g .ex
+{
+    width: 84%;
+    margin-bottom: 50px;
+    color: red;
+    font-size: 0.5vw;
+    font-weight: normal;
+}
+
+.img_view
+{
+    display: none;
+}
+
+.img_view img
+{
+    width: 250px;
+}
+
+.processing_m p
+{
+
+    color: black;
+    font-weight: bold;
+}
+
+.position img
+{
+    justify-content: center;
+}
+
+.process-img-2 img
+{
+    margin-right: 13%;
+    margin-left: 20%;
+}
+
+
+.processing_m .position p::nth-child(2)
+{
+    margin-bottom: 0;
+}
+
+.process_s
+{
+    color: black;
+}
+
+.actual_size
+{
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 100%;
+    margin: auto;
+
+}
+
+input.size_w.detail-location
+{
+    margin-left: 2%;
+    margin-bottom: 10px;
+    width: 94%;
+    height: 30px;
+}
+
+textarea
+{
+    border: none;
+    background-color: #cacaca28;
+    border-radius: 5px;
+    resize: none;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 50px;
+}
+
+
+/*  납기일종류*/
+.due
+{
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    color: black;
+    justify-content: center;
+}
+
+.due p
+{
+    margin-top: 96px;
+    font-size: 1.2vw;
+}
+
+.fast_ex
+{
+    cursor: pointer;
+    margin-top: 18px;
+    position: absolute;
+    right: 28%;
+    top: 262px;
+    width: 18%;
+}
+
+.fast_ex p
+{
+    margin-top: 0;
+    font-size: 0.8vw;
+    font-weight: bold;
+    color: black;
+}
+
+.fast_ex img
+{
+    float: left;
+    padding-right: 10px;
+}
+
+
+/* 납기일, 납임금액 */
+.estimate
+{   
+    margin-bottom: 100px !important;
+    margin: auto;
+    width: 40%;
+    background: #efefef;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+              -6px -6px 10px rgba(255, 255, 255, .5),
+              6px 6px 8px rgba(255, 255, 255, .075),
+              6px 6px 10px rgba(0, 0, 0, .15);
+    border-radius: 6px;
+}
+
+.estimate .estimate_t
+{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.estimate .estimate_t tr, .estimate .estimate_t td
+{
+    border: none;
+    width: 80%;
+    padding: 6%;
+}
+
+
+.estimate_t tr:first-child
+{
+    border-bottom: 1px solid #00395e;
+}
+
+.estimate_t tr:nth-last-child(2)
+{
+    border-top: 1px solid #00395e;
+}
+
+
+
+
+
+
+/* mediaqury -------------------------------------------------------------------------*/
+@media all and (max-width:767px) {
+
+    .wizard > .steps > ul > li
+{
+    width: 50%;
+}
+
+    
+    .wizard > .steps a,
+    .wizard > .steps a:hover,
+    .wizard > .steps a:active
+    {
+        margin-bottom: 10px;
+        display: block;
+        width: auto;
+        margin: 0 0.5em 0.5em;
+        padding: 0.5em 0.5em;
+        text-decoration: none;
+        height: 27px;
+        font-size: 0.75vw;
+        text-align: center;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .wizard > .steps .disabled a,
+    .wizard > .steps .disabled a:hover,
+    .wizard > .steps .disabled a:active
+    {
+        margin-bottom: 10px;
+        background: #efefef;
+        box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                -6px -6px 10px rgba(255, 255, 255, .5),
+                6px 6px 8px rgba(255, 255, 255, .075),
+                6px 6px 10px rgba(0, 0, 0, .15);
+        color: #000;
+        cursor: default;
+        height: 27px;
+        font-size: 0.75vw;
+        text-align: center;
+    }
+
+    .wizard > .steps .current a,
+    .wizard > .steps .current a:hover,
+    .wizard > .steps .current a:active
+    {
+        background: #000000;
+        color: #fff;
+        cursor: default;
+        height: 27px;
+        font-size: 0.75vw;
+        text-align: center;
+    }
+
+    .wizard > .steps .done a,
+    .wizard > .steps .done a:hover,
+    .wizard > .steps .done a:active
+    {
+        height: 27px;
+        background: #daa520;
+        color: #000;
+    }
+
+    .wizard > .steps .error a,
+    .wizard > .steps .error a:hover,
+    .wizard > .steps .error a:active
+    {
+        background: #ff3111;
+        color: #fff;
+    }
+
+    .wizard > .content
+    {   
+        position: relative;
+        margin: auto;
+        margin-bottom: 120px;
+        top: 211px;
+        /* background: #eee; */
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+   .main-title
+   {
+       position: absolute;
+       left: 0;
+       font-size: 4vw !important;
+   }
+    
+    .wizard.vertical > .content
+    {
+        display: inline;
+        width: 80%;
+    }
+        
+    
+    .wizard.vertical > .steps > ul > li {
+        float:none;
+        width: 100% !important;
+        margin: 0;
+        text-align: left;
+    }
+    
+
+    .wizard > .steps 
+    {
+        width: 90%;
+    }
+
+    .wizard.vertical > .steps {
+        display: inline;
+        float: left;
+        margin-left: 4%;
+        width: 85%;
+    }
+    
+
+    /* 의뢰자종류 및 의뢰방식 */
+    .bundle .kind {
+        width: 90%;
+        margin: auto;
+    }
+    
+    .tooltip-inner {
+        white-space: nowrap;
+    }
+
+     /* 툴팁 */
+      
+     [data-tooltip-text]:hover
+     {
+        position: relative;
+      }
+     
+      [data-tooltip-text]:hover:after {
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+        border-radius: 6px;
+     
+        color: #000;
+        font-size: 1vw;
+        content: attr(data-tooltip-text);
+     
+
+        top: 0;
+        left:0;    
+        padding: 7px 5px;
+        position: absolute;
+        height: 50px;
+        width: 100px;
+        word-wrap: break-word;
+        z-index: 2;
+     }
+
+    .row .sub-title
+    {
+        margin-top: 20px;
+        margin-bottom: 20px !important;
+        display: inline-block;
+        margin-left: 10%;
+        color: black;
+    }
+
+    .client-k p.sub-title
+    {
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+
+    .box{
+        margin-bottom: 20px;
+        height: 130px;
+        width: 40%;
+    }
+
+    .box img
+    {
+        padding-top:30px;
+        width: 40%;
+    }
+
+    .kind .box:first-child img
+    {
+        width: 30%;
+    }
+
+    .box p
+    {
+        margin-top: 14px;
+        font-size: 14px;
+    }
+    
+    .wizard > .actions > ul 
+    {
+        width: 100%;
+        
+    }
+
+    .detail_box:nth-child(3),
+    .detail_box:nth-child(4)
+    {
+        margin-bottom: 200px;
+    }
+
+
+    /* 세금계산서 */
+
+.client-k
+{
+    margin-bottom: 50px;
+}
+
+.col-xs-12 p
+{
+    display:inline-block;
+    font-size: 1.1vw; 
+    color: black;
+}
+.col-lg-offset-2
+{
+    margin-bottom: 163px;
+}
+.input_filed
+{
+    padding-left: 3%; 
+    margin-bottom: 30px; 
+    width: 79% !important; 
+    height: 41px;
+    border-radius: 5px; 
+    border:solid 1px #00395e; 
+    color: black;
+}
+
+.col-md-12 .input_f2
+{
+    margin-left: 0;
+    width: 63% !important;
+}
+
+
+label.login
+{
+    margin-left: 12%;
+    padding-bottom: 4px !important; 
+    color: #00395e;
+}
+.bt_j
+{
+    width: 16%; 
+    height: 40px;
+    border-radius: 5px; 
+    border-style: none; 
+    background-color: #00395e;
+}
+
+.form-sty
+{
+    margin: auto;
+}
+
+    .body
+    {
+        width: 100% !important;
+    }
+
+    .means
+    {
+        width:90%;
+        margin: auto;
+        display: flex;
+
+    } 
+
+    .means .box:nth-child(3)
+    {
+        margin-right: 45%;
+    }
+    
+    
+    .full img, .request img
+    {
+        padding-top: 50px;
+    }
+    
+    .full p 
+    {
+        margin-top: 26px !important;
+    }
+    
+    /* 툴팁 */
+      
+    [data-tooltip-text]:hover
+    {
+       position: relative;
+     }
+    
+     [data-tooltip-text]:hover:after {
+       background-color: #fff;
+       background-color: rgba(255, 255, 255, 0.8);
+       box-shadow: 0px 0px 3px 1px rgba(50, 50, 50, 0.4);
+       border-radius: 6px;
+    
+       color: #000;
+       font-size: 1vw;
+       content: attr(data-tooltip-text);
+    
+       margin-bottom: 10px;
+       top: 0;
+       left:0;    
+       padding: 7px 12px;
+       position: absolute;
+       height: 100px;
+       min-width: 100%;
+       word-wrap: break-word;
+       z-index: 2;
+    }
+
+    
+
+/* 의류카테고리 */
+
+.category
+{
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.category .box
+{
+    width: 46%;
+    height: 130px;
+}
+
+.category .box img
+{
+    width: 16%;
+}
+
+.category .box img:nth-child(3)
+{
+    width: 23%;
+}
+
+
+
+/* 의류종류 */
+.type
+{
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    display: flex;
+    flex-flow: wrap; 
+}
+.type .box
+{
+    width: 46%;
+}
+
+.long, .short, .hood
+{
+    margin-top: 0px;
+}
+
+.sub-title-error2 span
+{
+    color: red;
+    font-weight: bold;
+}
+
+
+.sub-title-error3 span
+{
+    margin-left: 10%;
+    color: red;
+    font-weight: bold;
+}
+
+/* 의뢰종류-상세 */
+.type_detail
+{
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-flow: wrap; 
+}
+
+.type_detail .box
+{
+    width: 46%;
+}
+
+.round, .raglan
+{
+    margin-top: 0px;
+}
+
+.type_detail_p1
+{
+    margin-left:11%;
+    margin-bottom: 10px;
+}
+
+
+/* 의류핏 */
+.fit
+{
+    margin: auto;
+    margin-bottom: 50px;
+    width: 80%;
+    display: flex;
+    flex-flow: wrap; 
+}
+
+.fit .box
+{
+    margin-bottom: 20px;
+    width: 46%;
+}
+
+
+.fit .box img
+{
+    padding-top: 20px
+}
+
+.fit .box p
+{
+    margin-top: 17px;
+}
+
+.typo
+{
+    margin-top: 0;
+    margin-bottom: 0px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vw;
+    color: black;
+}
+
+
+.typo a
+{
+    text-decoration: none;
+    color: #008891;
+}
+
+.typo a:hover
+{
+    color: black;
+}
+
+
+/*중간정산박스*/
+.interim
+{   
+    z-index: 1;
+    position: fixed;
+    right: 18%;
+    top: 136px;
+    padding: 1% 1%;
+    width: 63%;
+    border-radius: 6px;
+    background-color: #efefef;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000;
+}
+
+.interim tbody
+{   
+    color: #000;
+}
+
+button.m_bt
+{
+    z-index: 5;
+    line-height: 1.4;
+    position: fixed;
+    right: 0;
+    top: 140px;
+    width: 7%;
+    height: 66px;
+    background-color: #000;
+    color: #fff;
+    font-size: 10px;
+    border-radius: 15px 0px 0px 15px;
+    border: none;
+}
+
+.interim td
+{
+    padding-left: 0;
+}
+
+.interim tr
+{
+    border: none;
+}
+
+
+
+/* 의류개수 및 원단 */
+
+.grading_w2 .col label {
+    width: 44%;
+}
+
+table, thead, tbody, th, td, tr { 
+    display: block; 
+    
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+thead 
+{ 
+    border: 1px solid #ccc;
+}
+
+thead th{
+    font-size: 1vw;
+    font-weight: normal;
+    color: #000000;
+
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+}
+
+td.check-size
+{
+    padding-left: 40%;
+}
+
+td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 0px;
+    left: 6px;
+    /* margin-top: 10px; */
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}
+
+
+
+.grading_all td:nth-of-type(1):before
+{
+    margin-top: 27px;
+}
+
+.fabric td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+
+}
+
+.fabric td:last-child{
+    display:block;
+}
+
+
+.sub-title-material
+{
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+table.afternoon-session.grading_all,
+table.afternoon-session.sizeadd, 
+table.afternoon-session.fabric
+{
+    margin: auto;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.grading_all .check-size label
+{
+    
+    width: 45%;
+}
+
+.grading_all .check-size label:first-child
+{
+    margin-left: 6%;
+}
+
+.grading_all .check-size label:nth-child(3)
+{
+    margin-right: 4%;
+}
+
+.grading_all .check-size label:nth-child(4)
+{
+    margin-right: 2%;
+}
+
+.grading_all .check-size label:nth-child(5)
+{
+    margin-right: 6%;
+}
+
+.grading_all .check-size label:nth-child(7)
+{
+    margin-right: 40.5%;
+}
+
+select.type_choose
+{
+    padding: 3%;
+    margin-top: 3px;
+}
+
+.row .sub-title-add
+{   
+    cursor: pointer;
+    width: 26%;
+    float: right;
+}
+
+.fabric td:nth-of-type(1):before,
+.fabric td:nth-of-type(2):before
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.size_choose
+{
+    width: 100%;
+}
+
+input.check-s
+{
+    width: 31%;
+}
+
+.sub input 
+{
+    width: 10%;
+}
+
+ 
+
+
+
+/* Label the data */
+	
+	.grading_all td:nth-of-type(1):before { content: "사이즈";}
+	.grading_all td:nth-of-type(2):before { content: "생산개수"; }
+    .grading_all td:nth-of-type(3):before { content: "봉제"; }
+    .sizeadd td:nth-of-type(1):before { content: "사이즈"; }
+    .sizeadd td:nth-of-type(2):before { content: "XXS"; }
+    .sizeadd td:nth-of-type(3):before { content: "XS"; }
+    .sizeadd td:nth-of-type(4):before { content: "S"; }
+    .sizeadd td:nth-of-type(5):before { content: "M"; }
+    .sizeadd td:nth-of-type(6):before { content: "L"; }
+    .sizeadd td:nth-of-type(7):before { content: "XL"; }
+    .sizeadd td:nth-of-type(8):before { content: "XXL"; }
+    .fabric td:nth-of-type(1):before { content: "원단"; }
+	.fabric td:nth-of-type(2):before { content: "이미지"; }
+	.fabric td:nth-of-type(3):before { content: "선택한 원단"; }
+
+
+/* 그레이딩*/
+
+.grading_w span
+{
+    display:inline-block;
+    width: 30%;
+}
+
+.grading_w tr:nth-child(2)
+{
+    display: none;
+}
+
+.grading_w input
+{
+    width: 28% !important;
+}
+
+.grading_w input:first-child
+{
+    margin-right: 10%;
+}
+
+.grading_w label
+{
+    margin-left: 15%;
+}
+
+.grading_w label span input
+{
+    width: 100% !important;
+}
+label.list
+{
+    width: 92%;
+}
+
+label.list span
+{
+    margin-left: 17%;
+}
+
+table.grading_w
+{
+    margin-top: 15px;
+}
+
+.grading_w2 tr:nth-child(2)
+{
+    display: none;
+} 
+
+.grading_w2 span
+{
+    display:inline-block;
+    width: 30%;
+}
+
+.grading_w2 input
+{
+    width: 28% !important;
+}
+
+.grading_w2 input:first-child
+{
+    margin-right: 10%;
+}
+
+.grading_w2 label
+{
+    margin-left: 15%;
+}
+
+.grading_w2 label span input
+{
+    width: 100% !important;
+}
+
+.grading_w2 td {
+    padding-left: 20%;
+}
+
+table.grading_w2 span:first-child
+{
+    color: black;
+}
+
+.sub p
+{
+    font-size: 3vw;
+}
+
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+thead 
+{ 
+    border: 1px solid #ccc;
+}
+
+thead th
+{   
+    display: table-cell;
+    font-size: 1vw;
+    font-weight: normal;
+    color: #000000;
+
+}
+
+tr { border: 1px solid #ccc; }
+
+.grading_w td 
+{
+    padding-left: 20%;
+}
+
+.grad .arrow-all img.arrow:nth-child(2),
+.grad .arrow-all img.arrow:nth-child(3),
+.grad .arrow-all img.arrow:nth-child(4),
+.grad .arrow-all img.arrow:nth-child(5),
+.grad .arrow-all img.arrow:nth-child(6),
+.grad .arrow-all img.arrow:nth-child(7),
+.grad .arrow-all img.arrow:nth-child(8),
+.grad .arrow-all img.arrow:nth-child(9),
+.grad .arrow-all img.arrow:nth-child(10),
+.grad .arrow-all img.arrow:nth-child(11)
+{
+    z-index: 3;
+    position: absolute;
+    left: 6.6%;
+    top:6px;
+    width: 91%;
+}
+
+
+td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 10px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}
+
+.row .grading-ct
+{
+    font-size: 2.5vw;
+}
+
+.grad .clothes-size
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    left: 2%;
+    width: 100%;
+}
+
+.g-bt button
+{
+    width: 14%;
+}
+
+
+
+/* Label the data */
+	
+.grading_w td:nth-of-type(1):before { content: ""; }
+	.grading_w td:nth-of-type(2):before { content: "어깨넓이"; }
+	.grading_w td:nth-of-type(3):before { content: "가슴둘레"; }
+	.grading_w td:nth-of-type(4):before { content: "허리둘레"; }
+	.grading_w td:nth-of-type(5):before { content: "밑단둘레"; }
+	.grading_w td:nth-of-type(6):before { content: "진동(직선)"; }
+    .grading_w td:nth-of-type(7):before { content: "총장"; }
+    .grading_w2 td:nth-of-type(1):before { content: ""; }
+    .grading_w2 td:nth-of-type(2):before { content: "소맷단둘레"; }
+    .grading_w2 td:nth-of-type(3):before { content: "소매길이"; }
+    .grading_w2 td:nth-of-type(4):before { content: "목너비"; }
+    .grading_w2 td:nth-of-type(5):before { content: "목깊이"; }
+    .grading_w2 td:nth-of-type(6):before { content: "후드길이"; }
+    .grading_w2 td:nth-of-type(7):before { content: "후드폭"; }
+
+    .subsidiary td:nth-of-type(1):before { content: "XXS"; }
+    .subsidiary td:nth-of-type(2):before { content: "XS"; }
+    .subsidiary td:nth-of-type(3):before { content: "S"; }
+
+/*부자재  */
+
+.sub .row p 
+{
+    font-size: 16px;
+}
+.subsidiary td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding:30px 0;
+}
+
+.sub label
+{
+    width: 100%;
+}
+
+.sub label:nth-child(1)
+{
+    padding-right: 8%;
+}
+.sub label:nth-child(2)
+{
+    padding-right: 4%;
+}
+
+.sub .label_s td:nth-child(2)
+{
+    padding: 5%;
+    margin-bottom: 13px;
+    border-bottom: none;
+}
+
+.sub table.label_s label:last-child {
+    margin-left: -37%;
+}
+
+.sub p
+{
+    margin-bottom: 20px;
+    font-size: 3vw;
+}
+
+.sub .blind-main label:nth-child(1)
+{
+    padding-right: 4%;
+}
+
+thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+thead 
+{ 
+    border: 1px solid #ccc;
+}
+
+thead th
+{
+    font-size: 1vw;
+    font-weight: normal;
+    color: #000000;
+
+}
+
+tr { border: 1px solid #ccc; }
+
+table.afternoon-session
+{
+    margin-bottom: 50px;
+    margin-top:50px;
+    width: 100%;
+}
+
+td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 10px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+}
+
+.row .grading-ct
+{
+    font-size: 2.5vw;
+}
+
+.subsidiary_choose
+{
+    margin-left: 55%;
+}
+
+.file_load input.file_img
+{
+    width: 50%;
+}
+
+p.sub-title-2
+{
+    margin-top: 17px;
+    width: 26%;
+    float: right;
+    font-size: 2.5vw;
+}
+
+p.sub-title-2 img
+{
+    margin-top: 6px;
+}
+
+table.afternoon-session .blind-main .file_load input
+{
+    width: 100%;
+}
+
+/* Label the data */
+	
+    .label_s td:nth-of-type(1):before { content: "라벨"; }
+	.label_s td:nth-of-type(2):before { content: "선택한 라벨"; }
+    .blind-main td:nth-of-type(1):before { content: "분류"; }
+    .blind-main td:nth-of-type(2):before { content: "업로드"; }
+    .subsidiary td:nth-of-type(1):before { content: "부자재"; }
+    .subsidiary td:nth-of-type(2):before { content: "이미지"; }
+    .subsidiary td:nth-of-type(3):before { content: "선택한 부자재"; }
+
+/* 가공방식 */
+
+.processing_m
+{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.way
+{
+    margin-bottom: 70px;
+    margin-top: 50px
+}
+
+
+.process_g .bt_remove
+{
+    color: black;
+}
+
+.process_g .ex
+{
+    color: red;
+    font-weight: normal;
+    width: 97%;
+}
+
+.img_view
+{
+    display: none;
+}
+
+.img_view img
+{
+    width: 250px;
+}
+
+.processing_m p
+{
+    margin: 0;
+}
+
+.position img
+{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    width: 69%;
+}
+
+.position .process-img-2 img
+{
+    width: 31%;
+}
+
+.position p:last-child
+{
+    margin-top: 0;
+}
+
+
+.process_s
+{
+    margin-left: 1%;
+    width: 55%;
+    color: black;
+}
+
+
+.actual_size
+{
+    width: 100%;
+    margin: auto;
+}
+
+.actual_size .label_as
+{
+    margin: auto;
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+
+.actual_size .label_as:first-child
+{
+    margin-top: 10px;
+}
+
+.actual_size .label_as label 
+{
+    float: left;
+}
+
+input.size_w.detail-location
+{
+    margin-left: 2%;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 60px;
+}
+
+textarea
+{
+    margin-bottom: 20px;
+    border: none;
+    background-color: #cacaca28;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    height: 50px;
+}
+
+
+/* 납기일 종류 */
+
+.due
+{
+    margin: auto;
+    margin-bottom: 100px;
+    width: 80%;
+    height: 289px;
+}
+
+.due .box
+{
+    width: 45%;
+}
+
+.due .box p
+{
+    font-size: 14px;
+    margin-top: 49px;
+}
+
+
+.fast_ex
+{
+    position: absolute;
+    right: 14%;
+    top: 171px;
+    width: 53%;
+}
+
+.fast_ex p
+{
+    display:block;
+    margin-left: 0;
+}
+
+
+
+/* 견정금액 */
+
+.estimate
+{
+    width: 50%;
+}
+
+.estimate .estimate_t
+{
+    font-size: 1.6vw;
+    width: 100%;
+}
+
+.estimate .estimate_t tr
+{
+    width: 100%;
+}
+
+.estimate .estimate_t td
+{
+    padding: 0;
+    width: 100%;
+}
+
+
+.estimate .estimate_t tr:last-child,
+.estimate .estimate_t tr:nth-last-child(2)
+{
+    padding: 0;
+}
+
+.estimate .estimate_t tr:last-child
+{
+    padding-bottom: 20px;
+}
+
+.estimate .estimate_t tr:nth-last-child(2)
+{
+    padding-top:  20px;
+}
+
+}
+
+
+
+

@@ -1,0 +1,161 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+
+#h2{
+    margin-top:88px; 
+    margin-bottom: 52px; 
+    font-size: 2.6vw; 
+    font-weight: bold;
+    color: #000; 
+    text-align: center;
+}
+.input_filed{
+    padding-left: 3.5%; 
+    width: 47.5%; 
+    height: 41px;
+    border-radius: 5px; 
+    border:solid 1px #000; 
+    color: black;
+}
+label{
+    padding-top: 10px; 
+    padding-bottom: 4px !important; 
+    padding-right: 34%; 
+    color: #000;
+}
+button{
+    color: white;
+}
+button:hover{
+    background-color: #daa520;
+}
+.bt_j{
+    width: 11%; 
+    height: 40px;
+    border-radius: 5px; 
+    border-style: none; 
+    background-color: #000;
+}
+.btn{
+    margin-top: 30px;
+    margin-bottom: 50px;  
+    width: 19.5%; 
+    height: 39px; 
+    background-color: #000;
+    border: none;
+    outline: none;
+}
+.btn:first-child{ 
+    margin-right: 8%;
+}
+.btn:hover{
+    color: #fff;
+}
+#email{
+    padding-left: 3.5%; 
+    width: 47.5%;
+}
+#post_1{
+    padding-left: 3.5%; 
+    width: 47.5%; 
+    height: 40px; 
+    border-radius: 5px;
+    border:solid 1px #000; 
+    color: black;
+}
+#post_2{
+    padding-left: 3.5%; 
+    width: 47.5%;
+    height: 40px; 
+    border-radius: 5px;
+    border:solid 1px #000; 
+    color: black;
+}
+#post {
+    padding-left: 3.5%; 
+    width: 36%;
+}
+.address{ 
+    padding-right: 44%;
+}
+.input .cd{
+    border: solid 1px #000;
+}
+
+
+
+@media all and (max-width:767px) { /* 스마트폰 */
+    #h2{
+        font-size: 8.6vw;
+    }
+    #email{
+        padding-left: 3.5%; 
+        width: 56%;
+    }
+    #post{ 
+        width: 200px; 
+        height: 40px;
+    }
+    .input_filed{
+        padding-left: 4.5%; 
+        width: 88%; 
+        height: 41px;
+        border-radius: 5px; 
+        border:solid 1px #000; 
+        color: black;
+    }
+    .bt_j{
+        margin-top: 10px; 
+        width: 30%; 
+        height: 40px;
+        border-radius: 5px; 
+        border-style: none; 
+        background-color: #000;
+    }
+    .btn{
+        margin-right: 5%; 
+        width: 31.5%;
+    }
+    button{
+        color: white;
+    }
+    button:hover{
+        background-color: #daa520;
+    }
+    .btn:first-child{
+        margin-right:13%;
+    }
+    .go{ 
+        text-align: center;
+    }
+    .row{
+        margin: 0; 
+        margin-left: 5%;
+    }
+    .checkbox label{
+        padding: 0;
+    }
+    #post {
+        width: 88%;
+        padding-left: 4.5%;
+    }
+    #post_1{
+        width:88%; 
+        color: black;
+        padding-left: 4.5%;
+    } 
+    #post_2{
+        width: 88%; 
+        color: black;
+        padding-left: 4.5%;
+    }
+    .address{ 
+        padding-right: 29%;
+    }
+    .col-lg-8,.col-lg-offset-2,.col-md-10,.col-md-offset-1{
+        padding-left: 5%;
+    }
+
+}
+

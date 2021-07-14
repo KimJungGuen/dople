@@ -1,0 +1,144 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
+
+body{
+    overflow: auto;
+}
+.container{ 
+    height: 900px;
+}
+#h2{
+    margin-top:88px; 
+    margin-bottom: 52px; 
+    font-size: 2.6vw; 
+    font-weight: bold;
+    color: #000; 
+    text-align: center;
+}
+.btn_login{ 
+    margin-left: 14%;
+    cursor: pointer; 
+    width: 20%;
+    height: 50px; 
+    border-radius: 5px;
+    background-color: #000; 
+    border-style: none; 
+    color: white; 
+    font-size:1vw;
+}
+.btn_login:hover{
+    background-color: #daa520;
+}
+#email,#password{
+    padding-left: 3.5%; 
+    width: 47.5%; 
+    height: 41px;
+    border-radius: 5px; 
+    border:solid 1px #000; 
+    color: black;}
+label{
+    padding-bottom: 3px !important; 
+    padding-right: 34%; 
+    color: #000;
+}
+label.login.lg{
+    padding-right:39%; 
+}
+.link{
+    margin-left: 11%;
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+}
+.link li{
+    display: inline-block;
+    border-right: 2px solid #000;
+    margin-right: 1%;
+    width: 15%;
+}
+.link li:nth-child(2){
+    width: 14.5%;
+}
+.link li:last-child{
+    border: none;
+}
+.link a{ 
+    margin-right: 2%;
+    color: #000;
+}
+hr{
+    margin:0; 
+    border: solid #000 1px !important; 
+    width: 359px;
+}
+.snslogin p{
+    padding:5% 22px 6%;
+    font-weight: bold; 
+    color:  #000;
+}
+.sns{ 
+    margin-left: 5%;
+}
+.sns li{
+    display: inline-block; 
+}
+.sns li img{
+    padding-left: 28%; 
+    width: 65px;
+}
+#footer p{color: #fff;}
+
+
+/* mediaquery */
+@media all and (max-width:767px) { /* 스마트폰 */
+#h2{
+    font-size: 8.6vw;
+}
+label{
+    padding-bottom: 3px !important; 
+    padding-right: 47%; 
+    color: #000;
+}
+label.login.lg{
+    padding-right:55%;
+}
+#email,#password{
+    padding-left: 4.5%; 
+    width: 69%; 
+    height: 41px;
+    border-radius: 5px; 
+    border:solid 1px #000; 
+    color: black;}
+.btn_login{   
+    margin-left: 0;
+    width: 53%;
+    height: 40px;
+    font-size: 3.5vw;
+}
+.row {
+    text-align: center;
+}
+.sns{
+    margin: 0;
+}
+hr{
+    width: 100%
+}
+.link{
+    margin: 0; 
+    width: 100%; 
+    padding: 40px 0;
+}
+.link li{
+    width: 33%;
+    margin-right: 0;
+}
+
+.link li:last-child
+{
+    width: 22%;
+}
+.snslogin p{
+    padding: 15% 22px 15%;
+    font-size: 3vw;
+}
+}
