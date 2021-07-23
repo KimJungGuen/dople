@@ -1,5 +1,4 @@
 <?php
-
     /**
      * @brief   관리자 관리
      * @author  김정근
@@ -14,11 +13,11 @@
          * @date    2020-11-24
          */
         private function connect() {
-            $host = 'localhost';
-            $user = 'hollerinc';
-            $password = 'hollerdb01!!';
-            $dbName = 'hollerinc';
-            $dbChar = 'utf8';
+            $host = '';
+            $user = '';
+            $password = '';
+            $dbName = '';
+            $dbChar = '';
 
             $dsn = "mysql:host={$host};dbname={$dbName};charset={$dbChar}";
             $pdo = new PDO($dsn, $user, $password);

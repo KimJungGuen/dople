@@ -14,11 +14,11 @@
          * @date    2021-01-28
          */
         private function connect() {
-            $host = 'localhost';
-            $user = 'hollerinc';
-            $password = 'hollerdb01!!';
-            $dbName = 'hollerinc';
-            $dbChar = 'utf8';
+            $host = '';
+            $user = '';
+            $password = '';
+            $dbName = '';
+            $dbChar = '';
 
             $dsn = "mysql:host={$host};dbname={$dbName};charset={$dbChar}";
             $pdo = new PDO($dsn, $user, $password);
